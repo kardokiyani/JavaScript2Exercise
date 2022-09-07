@@ -47,10 +47,29 @@ const myCountryJSON = JSON.stringify(myCountry);
 
 console.log(myCountryJSON);
 
-
 const countryJSON = `{"country": "Norway", "city": "Oslo", "currency": "Krone"}`;
 
 const country = JSON.parse(countryJSON);
 
 console.log(country);
 
+// Local Storage Lesson Task
+
+localStorage.setItem(`lesson`, `Local Storage`);
+
+localStorage.removeItem(`lesson`);
+
+localStorage.clear;
+
+const pet = {
+  type: "Dog",
+  name: "Lilje",
+};
+
+const jsonPet = JSON.stringify(pet);
+
+localStorage.setItem("pet", jsonPet);
+
+const petRetrieved = localStorage.getItem("pet");
+const newPet = JSON.parse(petRetrieved);
+console.log(newPet);
